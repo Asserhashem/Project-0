@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +12,7 @@
             color: #222;
         }
 
-        /* شريط الملاحة الأعلى */
+        /* Top navigation bar */
         .navbar {
             display: flex;
             justify-content: flex-end;
@@ -29,7 +29,7 @@
             text-decoration: underline;
         }
 
-        /* العنوان الرئيسي */
+        /* Main header */
         .header {
             border-bottom: 1px solid #ebebeb;
             padding: 10px 40px;
@@ -37,7 +37,7 @@
             font-size: 20px;
         }
 
-        /* حاوية النموذج */
+        /* Form container */
         .form-container {
             max-width: 1000px;
             margin: 30px 40px;
@@ -49,7 +49,7 @@
             margin-bottom: 25px;
         }
 
-        /* تنسيق صفوف إدخال البيانات */
+        /* Form rows styling */
         .form-row {
             display: flex;
             align-items: center;
@@ -80,7 +80,7 @@
             border-color: #4d90fe;
         }
 
-        /* زر البحث المتقدم */
+        /* Advanced search button */
         .button-row {
             display: flex;
             justify-content: flex-end;
@@ -106,58 +106,57 @@
 </head>
 <body>
 
-    <!-- رابط العودة للبحث العادي -->
+    <!-- Link back to Google Search -->
     <div class="navbar">
-        <a href="index.html">بحث Google العادي</a>
+        <a href="index.html">Google Search</a>
     </div>
 
     <div class="header">
-        البحث المتقدم
+        Advanced Search
     </div>
 
     <div class="form-container">
-        <div class="section-title">العثور على صفحات تتضمن...</div>
+        <div class="section-title">Find pages with...</div>
 
-        <!-- نموذج إرسال البحث المتقدم -->
+        <!-- Advanced search form -->
         <form action="https://www.google.com/search" method="get">
             
-            <!-- جميع هذه الكلمات -->
+            <!-- all these words: -->
             <div class="form-row">
-                <div class="form-label">جميع هذه الكلمات:</div>
+                <div class="form-label">all these words:</div>
                 <div class="form-input">
-                    <input type="text" name="as_q">
+                    <input type="text" name="as_q" autocomplete="off">
                 </div>
             </div>
 
-            <!-- هذه الكلمة أو العبارة بالكامل -->
+            <!-- this exact word or phrase: -->
             <div class="form-row">
-                <div class="form-label">هذه الكلمة أو العبارة بالكامل:</div>
+                <div class="form-label">this exact word or phrase:</div>
                 <div class="form-input">
-                    <input type="text" name="as_epq">
+                    <input type="text" name="as_epq" autocomplete="off">
                 </div>
             </div>
 
-            <!-- أي كلمة من هذه الكلمات -->
+            <!-- any of these words: -->
             <div class="form-row">
-                <div class="form-label">أي كلمة من هذه الكلمات:</div>
+                <div class="form-label">any of these words:</div>
                 <div class="form-input">
-                    <input type="text" name="as_oq">
+                    <input type="text" name="as_oq" autocomplete="off">
                 </div>
             </div>
 
-            <!-- لا شيء من هذه الكلمات -->
+            <!-- none of these words: -->
             <div class="form-row">
-                <div class="form-label">لا شيء من هذه الكلمات:</div>
+                <div class="form-label">none of these words:</div>
                 <div class="form-input">
-                    <input type="text" name="as_eq">
+                    <input type="text" name="as_eq" autocomplete="off">
                 </div>
             </div>
 
-            <!-- زر الإرسال -->
+            <!-- Submit button -->
             <div class="button-row">
-                <input type="submit" value="بحث متقدم" class="btn-advanced">
+                <input type="submit" value="Advanced Search" class="btn-advanced">
             </div>
-
         </form>
     </div>
 
