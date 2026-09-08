@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Advanced Search</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #222;
+        }
+
+        /* شريط الملاحة الأعلى */
+        .navbar {
+            display: flex;
+            justify-content: flex-end;
+            padding: 15px 20px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #000;
+            font-size: 14px;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        /* العنوان الرئيسي */
+        .header {
+            border-bottom: 1px solid #ebebeb;
+            padding: 10px 40px;
+            color: #d93025;
+            font-size: 20px;
+        }
+
+        /* حاوية النموذج */
+        .form-container {
+            max-width: 1000px;
+            margin: 30px 40px;
+        }
+
+        .section-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 25px;
+        }
+
+        /* تنسيق صفوف إدخال البيانات */
+        .form-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .form-label {
+            width: 200px;
+            font-size: 13px;
+            color: #333;
+        }
+
+        .form-input {
+            flex-grow: 1;
+            max-width: 500px;
+        }
+
+        .form-input input[type="text"] {
+            width: 100%;
+            padding: 7px;
+            border: 1px solid #ccc;
+            border-radius: 1px;
+            outline: none;
+            box-sizing: border-box;
+        }
+
+        .form-input input[type="text"]:focus {
+            border-color: #4d90fe;
+        }
+
+        /* زر البحث المتقدم */
+        .button-row {
+            display: flex;
+            justify-content: flex-end;
+            max-width: 700px;
+            margin-top: 25px;
+        }
+
+        .btn-advanced {
+            background-color: #4d90fe;
+            color: #fff;
+            border: 1px solid #3079ed;
+            padding: 8px 16px;
+            font-size: 11px;
+            font-weight: bold;
+            border-radius: 2px;
+            cursor: pointer;
+        }
+
+        .btn-advanced:hover {
+            background-color: #357ae8;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- رابط العودة للبحث العادي -->
+    <div class="navbar">
+        <a href="index.html">بحث Google العادي</a>
+    </div>
+
+    <div class="header">
+        البحث المتقدم
+    </div>
+
+    <div class="form-container">
+        <div class="section-title">العثور على صفحات تتضمن...</div>
+
+        <!-- نموذج إرسال البحث المتقدم -->
+        <form action="https://www.google.com/search" method="get">
+            
+            <!-- جميع هذه الكلمات -->
+            <div class="form-row">
+                <div class="form-label">جميع هذه الكلمات:</div>
+                <div class="form-input">
+                    <input type="text" name="as_q">
+                </div>
+            </div>
+
+            <!-- هذه الكلمة أو العبارة بالكامل -->
+            <div class="form-row">
+                <div class="form-label">هذه الكلمة أو العبارة بالكامل:</div>
+                <div class="form-input">
+                    <input type="text" name="as_epq">
+                </div>
+            </div>
+
+            <!-- أي كلمة من هذه الكلمات -->
+            <div class="form-row">
+                <div class="form-label">أي كلمة من هذه الكلمات:</div>
+                <div class="form-input">
+                    <input type="text" name="as_oq">
+                </div>
+            </div>
+
+            <!-- لا شيء من هذه الكلمات -->
+            <div class="form-row">
+                <div class="form-label">لا شيء من هذه الكلمات:</div>
+                <div class="form-input">
+                    <input type="text" name="as_eq">
+                </div>
+            </div>
+
+            <!-- زر الإرسال -->
+            <div class="button-row">
+                <input type="submit" value="بحث متقدم" class="btn-advanced">
+            </div>
+
+        </form>
+    </div>
+
+</body>
+</html>
